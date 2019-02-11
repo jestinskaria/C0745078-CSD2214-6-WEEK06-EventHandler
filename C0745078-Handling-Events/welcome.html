@@ -4,12 +4,18 @@
     <meta charset="utf-8" />
     <title>Event!!!</title>
     <script type="text/javascript">
-        function trigger(){
-            document.getElementById("hover").addEventListener("mouseover", popup);
-            function popup() {
-                alert("Welcome to my Web Page");
+      // function trigger(){
+         //   document.getElementById("hover").addEventListener("mouseover", popup);
+           // function popup() {
+               // alert("Welcome to my Web Page");
+            
+            function MouseRollover(MyImage) {
+                MyImage.src = "images/welcome2.png"
             }
-        }
+            function MouseOut(MyImage) {
+                MyImage.src = "images/welcome.jpg"
+            }
+       // }
     </script>
     <style>
         p{
@@ -28,8 +34,8 @@
     </style>
     
 </head>
-<body onload="trigger();">
-    <img id="hover" src="images/welcome.jpg">
+<body>
+    <img src="images/welcome.jpg" onmouseover="MouseRollover(this)" onmouseout="MouseOut(this)">
     
     
 </body>
